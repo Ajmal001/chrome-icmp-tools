@@ -1,0 +1,38 @@
+{
+  "name": "Terrapin Works ICMP Tools",
+  "description": "Tools to augment the ICMP platform.",
+  "version": "1.1.5",
+  "minimum_chrome_version": "9",
+  "manifest_version": 2,
+  "omnibox": {
+    "keyword": "ic"
+  },
+  "icons": {
+    "16": "Icon-16.png",
+    "48": "Icon-48.png",
+    "128": "Icon-128.png"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+      ]
+  },
+  "content_scripts": [
+      {
+        "matches": ["https://umd.innovationcenter.makerbot.com/*"],
+        "js": ["content.js"],
+        "run_at": "document_idle",
+        "all_frames": true
+      },
+      {
+        "matches": ["https://portal.tw.umd.edu/*"],
+        "js": ["checkinstall.js"],
+        "run_at": "document_end",
+        "all_frames": true
+      }
+    ],
+  "web_accessible_resources": ["requestSearch.html"],
+  "permissions": [
+       "activeTab"
+    ]
+}
