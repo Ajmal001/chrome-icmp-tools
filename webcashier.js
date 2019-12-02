@@ -45,6 +45,18 @@ $.get(chrome.extension.getURL('/webcashier.html'), function(data) {
         }
     });
 
+    document.getElementById('repZ18Button').addEventListener('click',function(){
+        if (document.getElementById('jobText').value !== '') {
+            document.getElementsByName("$TextField")[0].value = "Terrapin Works - R" + getRequestNumber() + " - [FDM] - MakerBot Replicator Z18";
+            document.getElementById('purchase').disabled = false;
+            document.getElementById('purchase').title = "Complete Purchase";
+            document.getElementById('noPurchaseAlert').style = "display:none;";
+            console.log('Populated comment with MakerBot Replicator Z18 information.');
+        } else {
+            alert('Request number required.');
+        }
+    });
+
     document.getElementById('designButton').addEventListener('click',function(){
         if (document.getElementById('serviceText').value !== '') {
             document.getElementsByName("$TextField")[0].value = "Terrapin Works - " + getProjectName() + " - [SERVICE] - Professional Design Service";
