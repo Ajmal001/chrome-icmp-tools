@@ -12,7 +12,7 @@ document.getElementById('purchase').style = "display: inline;";
 $.get(chrome.extension.getURL('/webcashier.html'), function(data) {
     $(data).appendTo('#web-cashier-purchase');
 
-    document.getElementsByName("$TextField")[0].disabled =  true;
+    document.getElementsByName("$TextField")[0].readOnly =  true;
     document.getElementsByName("$TextField")[0].required = true;
     document.getElementsByName("$TextField")[0].style  = "cursor: not-allowed;";
 
