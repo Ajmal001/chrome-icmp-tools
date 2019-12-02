@@ -1,0 +1,56 @@
+<html>
+<head>
+</head>
+<style type="text/css">
+.button-wrapper {
+    float:left;
+    margin-right: 5px;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+<body>
+    <div id="noPurchaseAlert">
+        <strong>⚠️ Purchase cannot be completed until a comment is added via one of the buttons below.</strong>
+    </div>
+    <div>
+        <h3 style="padding-top: 10px;">Comment Options</h3>
+        <p>Custom comments have been disabled by the Terrapin Works Tools Chrome extension to ensure data integrity.<br />Choose a button below to insert the appropriate comment for the order. <strong>Enter the ICMP request number first if it's an MIC print.</strong></p>
+    </div>
+    <div></div>
+        <h4>Product-based Items</h4>
+    </div>
+    <div class="button-wrapper">
+            <input type="text" placeholder="MIC Request Number(s)" id="jobText"/>
+    </div>
+	<div class="button-wrapper">
+		<button type="button" id="rep5thButton">5th Gen Print</button>
+    </div>
+    <div class="button-wrapper">
+		<button type="button" id="repPlusButton">Rep Plus Print</button>
+    </div>
+    <div style="clear:left; padding-top: 20px;">
+        <h4>Service-based Items</h4>
+    </div>
+    <div class="button-wrapper">
+        <input type="text" placeholder="Project Name / PI" id="serviceText"/>
+    </div>
+    <div class="button-wrapper">
+            <button type="button" id="designButton">Design Service</button>
+    </div>
+    <div class="button-wrapper">
+            <button type="button" id="scanButton">Scanning Service</button>
+    </div>
+    <div class="button-wrapper">
+        <button type="button" id="nanoscribeButton">Nanoscribe Usage</button>
+    </div>
+    <div class="button-wrapper clearfix" id="customCommentDiv" style="display:none;">
+            <button type="button" id="customButton">Allow Comment Editing</button>
+    </div>
+    <div style="clear:left; padding-top: 20px; font-size: 0.8em;">
+        ✅ Terrapin Works Tools Chrome extension is installed & functioning.
+    </div>
+</body>

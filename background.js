@@ -19,4 +19,3 @@ function navigate(url) {
 chrome.omnibox.onInputEntered.addListener(function(text) {
   navigate("https://umd.innovationcenter.makerbot.com/requests/" + text);
 });
-
